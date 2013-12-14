@@ -10,4 +10,6 @@
 
 @interface TWPhotosCollectionViewController : UICollectionViewController
 
+- (IBAction)cameraBarButtonItemPressed:(UIBarButtonItem *)sender;
+
 @end
