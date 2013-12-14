@@ -7,6 +7,7 @@
 //
 
 #import "TWPhotosCollectionViewController.h"
+#import "TWPhotoCollectionViewCell.h"
 
 @interface TWPhotosCollectionViewController ()
 
@@ -39,8 +40,9 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Photo Cell";
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    TWPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
+    cell.imageView.image = [UIImage imageNamed:@"Astronaut.jpg"];
     return cell;
     
 }
