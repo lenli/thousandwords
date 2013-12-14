@@ -26,6 +26,7 @@
 		BAA11427185C085700358D0A /* TWAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA11426185C085700358D0A /* TWAlbumTableViewController.m */; };
 		BAA1142D185C0BE100358D0A /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA1142C185C0BE100358D0A /* Album.m */; };
 		BAA11430185C24F000358D0A /* TWCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA1142F185C24F000358D0A /* TWCoreDataHelper.m */; };
+		BAA11433185C284900358D0A /* TWPhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA11432185C284900358D0A /* TWPhotosCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		BAA1142C185C0BE100358D0A /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Album.m; path = ../Album.m; sourceTree = "<group>"; };
 		BAA1142E185C24F000358D0A /* TWCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCoreDataHelper.h; sourceTree = "<group>"; };
 		BAA1142F185C24F000358D0A /* TWCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCoreDataHelper.m; sourceTree = "<group>"; };
+		BAA11431185C284900358D0A /* TWPhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWPhotosCollectionViewController.h; sourceTree = "<group>"; };
+		BAA11432185C284900358D0A /* TWPhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWPhotosCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 				BAA11423185C07BD00358D0A /* iphone-Storyboard.storyboard */,
 				BAA11425185C085700358D0A /* TWAlbumTableViewController.h */,
 				BAA11426185C085700358D0A /* TWAlbumTableViewController.m */,
+				BAA11431185C284900358D0A /* TWPhotosCollectionViewController.h */,
+				BAA11432185C284900358D0A /* TWPhotosCollectionViewController.m */,
 				BAA1142E185C24F000358D0A /* TWCoreDataHelper.h */,
 				BAA1142F185C24F000358D0A /* TWCoreDataHelper.m */,
 				BAA1142B185C0BE100358D0A /* Album.h */,
@@ -269,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAA114041851A42700358D0A /* ThousandWords.xcdatamodeld in Sources */,
+				BAA11433185C284900358D0A /* TWPhotosCollectionViewController.m in Sources */,
 				BAA113FD1851A42700358D0A /* main.m in Sources */,
 				BAA11427185C085700358D0A /* TWAlbumTableViewController.m in Sources */,
 				BAA1142D185C0BE100358D0A /* Album.m in Sources */,
