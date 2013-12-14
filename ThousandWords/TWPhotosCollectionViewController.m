@@ -8,6 +8,9 @@
 
 #import "TWPhotosCollectionViewController.h"
 #import "TWPhotoCollectionViewCell.h"
+#import "Photo.h"
+#import "TWPictureDataTransformer.h"
+#import "TWCoreDataHelper.h"
 
 @interface TWPhotosCollectionViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong, nonatomic) NSMutableArray *photos; // of UIImages
@@ -34,6 +37,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    NSSet *unorderedPhotos = self.album.photos;
+    NSSortDescriptor *dateDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
+    NSArray *sortedPhotos = [unorderedPhotos sortedArrayUsingDescriptors:@[dateDescriptor]];
+    self.photos = [sortedPhotos mutableCopy];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,14 +66,36 @@
     
 }
 
+#pragma mark - Helper Methods
+-(Photo *)photoFromImage:(UIImage *)image
+{
+    Photo *photo = [NSEntityDescription insertNewObjectForEntityForName:@"Photo" inManagedObjectContext:[TWCoreDataHelper managedObjectContext]];
+    photo.image = image;
+    photo.date = [NSDate date];
+    photo.albumBook = self.album;
+    
+    NSError *error = nil;
+    if (![[photo managedObjectContext] save:&error]) {
+        // Error Saving
+        NSLog(@"Error: %@", error);
+    }
+    
+    return photo;
+}
+
+
 
 #pragma mark - UICollectionViewDataSource
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Photo Cell";
     TWPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    Photo *photo = self.photos[indexPath.row];
+    
     cell.backgroundColor = [UIColor whiteColor];
-    cell.imageView.image = self.photos[indexPath.row];;
+    cell.imageView.image = photo.image;
+    
     return cell;
     
 }
@@ -82,7 +112,7 @@
 {
     UIImage *image = info[UIImagePickerControllerEditedImage];
     if (!image) image = info[UIImagePickerControllerOriginalImage];
-    [self.photos addObject:image];
+    [self.photos addObject:[self photoFromImage:image]];
     [self.collectionView reloadData];
     
     [self dismissViewControllerAnimated:YES completion:nil];

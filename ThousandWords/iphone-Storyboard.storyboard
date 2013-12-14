@@ -21,7 +21,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ti8-yH-Vlm" kind="push" id="Xrd-AW-fqX"/>
+                                    <segue destination="ti8-yH-Vlm" kind="push" identifier="Album Chosen" id="Xrd-AW-fqX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
