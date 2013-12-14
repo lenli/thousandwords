@@ -31,6 +31,7 @@
 		BAA1143B185CD0A300358D0A /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA1143A185CD0A300358D0A /* Photo.m */; };
 		BAA1143E185CD0A300358D0A /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA1143D185CD0A300358D0A /* Album.m */; };
 		BAA11442185CD17F00358D0A /* TWPictureDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA11441185CD17E00358D0A /* TWPictureDataTransformer.m */; };
+		BAA11445185CF25400358D0A /* TWPhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA11444185CF25400358D0A /* TWPhotoDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		BAA1143D185CD0A300358D0A /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
 		BAA11440185CD17E00358D0A /* TWPictureDataTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWPictureDataTransformer.h; path = ../TWPictureDataTransformer.h; sourceTree = "<group>"; };
 		BAA11441185CD17E00358D0A /* TWPictureDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWPictureDataTransformer.m; path = ../TWPictureDataTransformer.m; sourceTree = "<group>"; };
+		BAA11443185CF25400358D0A /* TWPhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWPhotoDetailViewController.h; sourceTree = "<group>"; };
+		BAA11444185CF25400358D0A /* TWPhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWPhotoDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 				BAA11423185C07BD00358D0A /* iphone-Storyboard.storyboard */,
 				BAA11425185C085700358D0A /* TWAlbumTableViewController.h */,
 				BAA11426185C085700358D0A /* TWAlbumTableViewController.m */,
+				BAA11443185CF25400358D0A /* TWPhotoDetailViewController.h */,
+				BAA11444185CF25400358D0A /* TWPhotoDetailViewController.m */,
 				BAA11431185C284900358D0A /* TWPhotosCollectionViewController.h */,
 				BAA11432185C284900358D0A /* TWPhotosCollectionViewController.m */,
 				BAA11434185C2AA300358D0A /* TWPhotoCollectionViewCell.h */,
@@ -308,6 +313,7 @@
 				BAA113FD1851A42700358D0A /* main.m in Sources */,
 				BAA11427185C085700358D0A /* TWAlbumTableViewController.m in Sources */,
 				BAA11442185CD17F00358D0A /* TWPictureDataTransformer.m in Sources */,
+				BAA11445185CF25400358D0A /* TWPhotoDetailViewController.m in Sources */,
 				BAA114011851A42700358D0A /* TWAppDelegate.m in Sources */,
 				BAA11430185C24F000358D0A /* TWCoreDataHelper.m in Sources */,
 			);
