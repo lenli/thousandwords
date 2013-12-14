@@ -69,7 +69,7 @@
     
     NSError *error = nil;
     if (![context save:&error]) {
-        //we have an error!
+        NSLog(@"%@", error);
     }
     return album;
     
@@ -81,7 +81,12 @@
 {
     if (buttonIndex == 1) {
         NSString *alertText = [alertView textFieldAtIndex:0].text;
-        NSLog(@"My new album is %@", alertText);
+        [self.albums addObject:[self albumWithName:alertText]];
+        [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.albums count]-1 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+//        Album *newAlbum = [self albumWithName:alertText];
+//        [self.albums addObject:newAlbum];
+//        [self.tableView reloadData];
+
     }
 }
 
@@ -105,6 +110,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    Album *selectedAlbum = self.albums[indexPath.row];
+    cell.textLabel.text = selectedAlbum.name;
     
     return cell;
 }
