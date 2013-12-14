@@ -22,6 +22,9 @@
 		BAA114101851A42800358D0A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA113F41851A42700358D0A /* CoreData.framework */; };
 		BAA114181851A42800358D0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAA114161851A42800358D0A /* InfoPlist.strings */; };
 		BAA1141A1851A42800358D0A /* ThousandWordsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA114191851A42800358D0A /* ThousandWordsTests.m */; };
+		BAA11424185C07BD00358D0A /* iphone-Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA11423185C07BD00358D0A /* iphone-Storyboard.storyboard */; };
+		BAA11427185C085700358D0A /* TWAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA11426185C085700358D0A /* TWAlbumTableViewController.m */; };
+		BAA1142D185C0BE100358D0A /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA1142C185C0BE100358D0A /* Album.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		BAA114151851A42800358D0A /* ThousandWordsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ThousandWordsTests-Info.plist"; sourceTree = "<group>"; };
 		BAA114171851A42800358D0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BAA114191851A42800358D0A /* ThousandWordsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThousandWordsTests.m; sourceTree = "<group>"; };
+		BAA11423185C07BD00358D0A /* iphone-Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "iphone-Storyboard.storyboard"; sourceTree = "<group>"; };
+		BAA11425185C085700358D0A /* TWAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWAlbumTableViewController.h; sourceTree = "<group>"; };
+		BAA11426185C085700358D0A /* TWAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWAlbumTableViewController.m; sourceTree = "<group>"; };
+		BAA1142B185C0BE100358D0A /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Album.h; path = ../Album.h; sourceTree = "<group>"; };
+		BAA1142C185C0BE100358D0A /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Album.m; path = ../Album.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +123,11 @@
 		BAA113F61851A42700358D0A /* ThousandWords */ = {
 			isa = PBXGroup;
 			children = (
-				BAA113FF1851A42700358D0A /* TWAppDelegate.h */,
-				BAA114001851A42700358D0A /* TWAppDelegate.m */,
+				BAA11423185C07BD00358D0A /* iphone-Storyboard.storyboard */,
+				BAA11425185C085700358D0A /* TWAlbumTableViewController.h */,
+				BAA11426185C085700358D0A /* TWAlbumTableViewController.m */,
+				BAA1142B185C0BE100358D0A /* Album.h */,
+				BAA1142C185C0BE100358D0A /* Album.m */,
 				BAA114051851A42700358D0A /* Images.xcassets */,
 				BAA114021851A42700358D0A /* ThousandWords.xcdatamodeld */,
 				BAA113F71851A42700358D0A /* Supporting Files */,
@@ -127,6 +138,8 @@
 		BAA113F71851A42700358D0A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BAA113FF1851A42700358D0A /* TWAppDelegate.h */,
+				BAA114001851A42700358D0A /* TWAppDelegate.m */,
 				BAA113F81851A42700358D0A /* ThousandWords-Info.plist */,
 				BAA113F91851A42700358D0A /* InfoPlist.strings */,
 				BAA113FC1851A42700358D0A /* main.m */,
@@ -229,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAA11424185C07BD00358D0A /* iphone-Storyboard.storyboard in Resources */,
 				BAA113FB1851A42700358D0A /* InfoPlist.strings in Resources */,
 				BAA114061851A42700358D0A /* Images.xcassets in Resources */,
 			);
@@ -251,6 +265,8 @@
 			files = (
 				BAA114041851A42700358D0A /* ThousandWords.xcdatamodeld in Sources */,
 				BAA113FD1851A42700358D0A /* main.m in Sources */,
+				BAA11427185C085700358D0A /* TWAlbumTableViewController.m in Sources */,
+				BAA1142D185C0BE100358D0A /* Album.m in Sources */,
 				BAA114011851A42700358D0A /* TWAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
