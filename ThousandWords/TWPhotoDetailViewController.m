@@ -8,6 +8,7 @@
 
 #import "TWPhotoDetailViewController.h"
 #import "Photo.h"
+#import "TWFiltersCollectionViewController.h"
 
 @interface TWPhotoDetailViewController ()
 
@@ -45,7 +46,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"Filter Segue"]) {
+        if ([segue.destinationViewController isKindOfClass:[TWFiltersCollectionViewController class]]) {
+            TWFiltersCollectionViewController *targetViewController = segue.destinationViewController;
+            targetViewController.photo = self.photo;
+            
+        }
+    }
+}
 
 - (IBAction)addFilterButtonPressed:(UIButton *)sender {
 }
