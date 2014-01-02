@@ -86,6 +86,16 @@
     static NSString *CellIdentifier = @"Photo Cell";
     TWPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
+    
+    dispatch_queue_t filterQueue = dispatch_queue_create("filter queue", NULL);
+    
+    dispatch_async(filterQueue, ^{
+        UIImage *filterImage = [self filteredImageFromImage:self.photo.image andFilter:self.filters[indexPath.row]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            cell.imageView.image = filterImage;
+        });
+    });
+    
     cell.imageView.image = [self filteredImageFromImage:self.photo.image andFilter:self.filters[indexPath.row]];
     
     return cell;
@@ -102,11 +112,14 @@
     TWPhotoCollectionViewCell *selectedCell = (TWPhotoCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
     self.photo.image = selectedCell.imageView.image;
     
-    NSError *error = nil;
-    if (![[self.photo managedObjectContext] save:&error]) {
-        NSLog(@"%@", error);
+    if (self.photo.image){
+        NSError *error = nil;
+        if (![[self.photo managedObjectContext] save:&error]) {
+            NSLog(@"%@", error);
+        }
+        [self.navigationController popViewControllerAnimated:YES];
+        
     }
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
